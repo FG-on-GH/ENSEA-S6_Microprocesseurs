@@ -1,6 +1,6 @@
 # Microprocesseurs
 
-### Ce dépôt contient différents travaux personels liés au cours de Système à Microcontrolleur de l'ENSEA, suivi durant le premier semestre (S5).
+### Ce dépôt contient différents travaux personels liés au cours de Microprocesseurs de l'ENSEA, suivi durant le deuxième semestre (S6).
 
 # Descriptif des dossiers
 
