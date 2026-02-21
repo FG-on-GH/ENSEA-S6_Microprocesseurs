@@ -1,0 +1,4 @@
+../Core/Src/utils.c:19:6:UTILS_WaitN10ms	32	static
+../Core/Src/utils.c:30:6:setup	8	static
+../Core/Src/utils.c:39:6:loop	8	static
+../Core/Src/utils.c:53:6:button_test	8	static

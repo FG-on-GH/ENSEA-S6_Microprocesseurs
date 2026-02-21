@@ -1,0 +1,47 @@
+/////////////////////////////////////////////
+//
+//		François-Gabriel Sourbé
+//		Maroua Qidi
+//		1G2 TD3 TP6
+//
+//		Microprocesseurs
+//		TP4 CPU PERFORMANCE
+//
+/////////////////////////////////////////////
+
+#include "algo.h"
+
+
+#include <stm32l4xx.h>
+#include <stm32l4xx_hal.h>
+
+void setup(){
+
+	// Activation de l'horloge
+	RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
+
+	// Initialisation du Timer 2
+
+	// Sachant que la fréquence du processeur est 80MHz et qu'on la divise par
+	// PSC+1 pour avoir la fréquence du timer, on prend PSC=79 pour
+	// un timer à 1MHz soit 1µs
+	TIM2->PSC = 79;
+	// On va utiliser ce timer pour mesurer des temps dont on ne peut pas savoir à
+	// l'avance si ils seront courts, on règle donc l'ARR au maximum
+	TIM2->ARR = 0xFFFFFFFF;
+
+	TIM2->CNT = 0;			// On remet le compteur à 0
+	TIM2->CR1 |= 1;			// On active le Timer en mettant le bit 0 à 1
+
+	RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
+	RCC->AHB2ENR |= RCC_AHB2ENR_GPIOCEN;
+
+	GPIOA->MODER &= ~(3<<2*GPIO_PIN_5);
+	GPIOA->MODER |= (1<<2*GPIO_PIN_5);
+	GPIOC->MODER &= ~(3<<2*GPIO_PIN_8);
+	GPIOC->MODER |= (1<<2*GPIO_PIN_8);
+}
+
+
+
+

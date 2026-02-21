@@ -1,0 +1,27 @@
+////////////////////////////////////////////
+//
+//		François-Gabriel Sourbé
+//		Maroua Qidi
+//		1G2 TD3 TP6
+//
+//		Microprocesseurs
+//		TP2 BARE METAL
+//
+////////////////////////////////////////////
+// COMMON DIRECTIVES to Use ASM Language
+  .syntax unified
+  .cpu cortex-m4
+  .fpu softvfp
+  .thumb
+
+///////////////////////////////
+
+	.global SETUP
+	.text
+
+SETUP:
+
+
+
+
+///////////////////////////////

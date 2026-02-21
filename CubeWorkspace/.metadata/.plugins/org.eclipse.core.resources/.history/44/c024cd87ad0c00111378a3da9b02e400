@@ -1,0 +1,20 @@
+/////////////////////////////////////////////
+//
+//		François-Gabriel Sourbé
+//		Maroua Qidi
+//		1G2 TD3 TP6
+//
+//		Microprocesseurs
+//		TP4 CPU PERFORMANCE
+//
+/////////////////////////////////////////////
+
+
+#ifndef INC_ALGO_H_
+#define INC_ALGO_H_
+
+void waitN(int);
+void setup();
+void loop();
+
+#endif /* INC_ALGO_H_ */

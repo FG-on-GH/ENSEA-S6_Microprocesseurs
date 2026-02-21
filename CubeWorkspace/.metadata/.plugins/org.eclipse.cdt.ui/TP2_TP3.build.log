@@ -1,0 +1,17 @@
+11:18:20 **** Incremental Build of configuration Debug for project TP2_TP3 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/button.d" -MT"Core/Src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/button.o"
+arm-none-eabi-gcc -o "TP2_TP3.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\franc\OneDrive - ENSEA\S6\uP\Cube Workspace S6\TP2_TP3\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TP2_TP3.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TP2_TP3.elf
+ 
+arm-none-eabi-size  TP2_TP3.elf 
+arm-none-eabi-objdump -h -S TP2_TP3.elf  > "TP2_TP3.list"
+   text	   data	    bss	    dec	    hex	filename
+   5552	     12	   1580	   7144	   1be8	TP2_TP3.elf
+Finished building: default.size.stdout
+ 
+Finished building: TP2_TP3.list
+ 
+
+11:18:21 Build Finished. 0 errors, 0 warnings. (took 1s.737ms)
+

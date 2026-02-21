@@ -1,0 +1,28 @@
+/////////////////////////////////////////////
+//
+//		François-Gabriel Sourbé
+//		Maroua Qidi
+//		1G2 TD3 TP6
+//
+//		Microprocesseurs
+//		TP4 CPU PERFORMANCE
+//
+/////////////////////////////////////////////
+
+#include "algo.h"
+#include <stm32l476xx.h>
+
+void UTILS_WaitN10ms(int N){
+	int n,i,s=0;
+	for(n=1;n<=N;n++){
+		for(i=0;i<100000;i++){
+			s=s+i;
+		}
+	}
+}
+
+
+void setup(){
+	TIM2->CR1 |= 1;
+
+}
